@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Salvador Bermudez</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="Actividad2.2Frontend">
+    <meta name="autor" contend="Salvador bermudez">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <!-- <link rel="stylesheet" type="text/css" href="ccs/style.css"> -->
+
+</head>
+
+
+<body>
+
+    <header>
+        <div class="contenedor">
+            <nav class="menu">
+                <a href="#Acerca" onclick="moverseA('acercade')">Acerca de</a>
+                <a href="#Trabajo" onclick="moverseA('stack')">Stack</a>
+                <a href="#Contacto" onclick="moverseA('contacto')">Contacto</a>
+            </nav>
+            <div class="contenedor-texto">
+                <div class="texto">
+                    <h1 class="nombre">Salvador Bermudez</h1>
+                    <h2 class="profesion"> Estudiante de ingeniería en Computación.</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <section class="acerca-de">
+            <div class="contenedor">
+                <div class="foto" id="acercade">
+                    <img src="img/perfil.jpg" width="150px" height="210px" alt="Salvador Bermudez">
+                </div>
+                <div class="texto">
+                    <h3 class="titulo">Acerca de</h3>
+                    <p>
+                        Salvador vive en el estado Trujillo, Venezuela. Tiene 19 años de edad, actualmente estudiante en la “Universidad Valle del Momboy”, con conocimientos en <span class="bold">lenguajes de programación con los cuales desarrolla páginas web.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="trabajos">
+            <div class="contenedor">
+                <h3 class="titulo" id="stack">Stack</h3>
+                <p id="infoStack" style="display: none;">Una lista de todos los servicios tecnológicos utilizados para construir y ejecutar una aplicación</p>
+                <div class="contenedor-trabajos">
+                    <div class="trabajo">
+                        <div class="thumb">
+                            <img src="img/html.jpg" alt="html5" width="100px" height="150px" id="html">
+                        </div>
+                        <div class="descripcion">
+                            <p class="info" id="infoHtml" style="display: none">Es el componente más básico de la Web. Define el significado y la estructura del contenido web</p>
+                            <p class="nombre">HTML</p>
+                            <p class="categoria">Conocimientos básicos en HTML.</p>
+                            <p class="conocimientos">
+                                Introduccion basica <br> Estructura HTML <br> Etiquetas HTML <br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="trabajo">
+                        <div class="thumb">
+                            <img src="img/css.jpg" alt="css" width="100px" height="150px" id="css">
+                        </div>
+                        <div class="descripcion">
+                            <p class="info" id="infoCss" style="display: none">Es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado.</p>
+                            <p class="nombre">CSS</p>
+                            <p class="categoria">Conocimientos básicos en ccs
+                                <p>
+                                    <p class="conocimientos">
+                                        Introduccion basica en ccs <br> Estructura css <br> Etiquetas ccs <br>
+                                    </p>
+                        </div>
+                    </div>
+                    <div class="trabajo">
+                        <div class="thumb">
+                            <img src="img/js.jpg" alt="JavaScript" width="100px" height="150px" id="js">
+                        </div>
+                        <div class="descripcion">
+                            <p class="info" id="infoJs" style="display: none">JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, ​ basado en prototipos, imperativo, débilmente tipado y dinámico.</p>
+                            <p class="nombre">JavaScript</p>
+                            <p class="categoria">Conocimientos básicos en javascript</p>
+                            <p class="conocimientos">
+                                Introduccion basica en JavaScript <br> Algoritmos <br> Variables <br> Constantes <br> Funciones <br> Bluces <br> Clases <br>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <section class="contacto">
+            <div class="contenedor">
+                <h3 class="titulo" id="contacto">Contacto</h3>
+                <form action="" class="formulario">
+                    <input type="text" placeholder="Nombre" name="nombre" required>
+                    <input type="email" placeholder="Correo" name="correo" required>
+                    <textarea name="mensaje" id="" placeholder="Mensaje"></textarea>
+
+                    <button class="boton" type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+        <section class="redes">
+            <div class="contenedor">
+                <a href="https://www.facebook.com/salvador.j.bermudez/" target="_blank" class="facebook"><i class="fa fa-facebook-official" ></i></a>
+                <a href="https://www.instagram.com/salvadorjosebermudez/?hl=es" target="_blank" class="instagram"><i class="fa fa-instagram" ></i></a>
+                <a href="https://github.com/Salva920" target="_blank" class="github"><i class="fa fa-github" ></i></a>
+            </div>
+        </section>
+    </footer>
+
+
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/funcionalidades.js"></script>
+</body>
+
+</html>
