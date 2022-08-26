@@ -9,18 +9,6 @@ function moverseA(idDelElemento) {
 
 
 
-// info html
-var e = document.getElementById('stack');
-e.onmouseover = function() {
-  document.getElementById('infoStack').style.display = 'inline-block';
-  document.getElementById('infoStack').style.backgroundColor = 'cyan';
-  document.getElementById('infoStack').style.fontSize = '14px';
-  document.getElementById('infoStack').style.marginLeft = '22%'
-  
-}
-e.onmouseout = function() {
-  document.getElementById('infoStack').style.display = 'none';
-}
 
 // info html
 var e = document.getElementById('html');
@@ -57,8 +45,40 @@ e.onmouseout = function() {
 }
 
 
+// carousel
+let caruItems = document.querySelectorAll('.carousel-item');
+let left = document.querySelector('.fa-arrow-left');
+let right = document.querySelector('.fa-arrow-right');
+let currentCaru = 1;
 
+left.addEventListener('click', ()=>{
+    caruItems.forEach(item =>{
+        item.classList.remove('caru-acvt');
+    });
 
-document.querySelector('p').onclick = function() {
-    alert('¡Ouch! ¡Deja de pincharme!');
+    currentCaru--;
+
+    if (currentCaru < 0) {
+        currentCaru = caruItems.length - 1;
+    }
+
+    caruItems[currentCaru].classList.add('caru-acvt');
+});
+
+let slideRight = ()=>{
+  caruItems.forEach(item =>{
+      item.classList.remove('caru-acvt');
+  });
+
+  currentCaru++;
+
+  if (currentCaru >= caruItems.length) {
+      currentCaru = 0;
+  }
+
+  caruItems[currentCaru].classList.add('caru-acvt');
 }
+
+right.addEventListener('click', slideRight);
+
+setInterval(slideRight, 3000);
